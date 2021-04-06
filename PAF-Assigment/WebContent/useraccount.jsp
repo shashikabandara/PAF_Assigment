@@ -25,7 +25,7 @@
 	        </ul>
 	</div>
 	</nav>
-	<form action="" method="post" class="sendmsg" id="frmlogin_registration">
+	<form action=""  method="post" class="sendmsg" id="frmlogin_registration">
 	<fieldset>
 <legend>Profile</legend>
 
