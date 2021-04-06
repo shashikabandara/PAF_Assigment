@@ -7,28 +7,29 @@
 <meta charset="UTF-8">
 <title>Login</title>
 <link href="main.css" type="text/css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="header_web">
-
-	<div class="menuBar">
-	        <ul>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Gadaget Badget</a>
+    </div>
+	        <ul class="nav navbar-nav">
 	            <li><a href="success.jsp" class="active" >PROFILE</a></li>
 	            <li><a href="customerinsert.jsp" >SEND MESSAGE</a></li>
 	            <li><a href="receivemessage.jsp" > MESSAGES LIST</a></li>
 	            <li><a href="logout.jsp" >LOGOUT</a></li>
 	        </ul>
 	</div>
-	<div class="menuBar_right">
-	     
-	</div>
-	</div>
+	</nav>
 	<form action="" method="post" class="sendmsg" id="frmlogin_registration">
 	<fieldset>
 <legend>Profile</legend>
 
-	<table>
+	<table class="table table-condensed" >
 	<c:forEach var="cus" items="${cusDetails}">
 	
 	<c:set var="id" value="${cus.id}"/>
