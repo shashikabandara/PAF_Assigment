@@ -7,38 +7,42 @@
 <meta charset="UTF-8">
 <title>Login</title>
 <link href="main.css" type="text/css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="header_web">
 
-	<div class="menuBar">
-	        <ul>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Gadaget Badget</a>
+    </div>
+	        <ul class="nav navbar-nav">
 	              <li><a href="#" >PROFILE</a></li>
 	            <li><a href="#" >SEND MESSAGE</a></li>
 	            <li><a href="#" > MESSAGES LIST</a></li>
 	            <li><a href="#">LOGOUT</a></li>
 	        </ul>
 	</div>
-	<div class="menuBar_right">
-	     
-	</div>
-	</div>
+</nav>
+	
+	<div class="container">
 	<form action="log" method="post" class="sendmsg" id="frmlogin_registration">
 	<fieldset>
 <legend>Login</legend>
-<table>
-<tr><td>User Name </td><td><input type="text" name="uid"></td></tr>
-<tr><td>Password </td><td><input type="password" name="pass"></td></tr>
-
+<div class="form-group">
+<label>User Name : </label><input type="text" class="form-control" name="uid" placeholder = "Enter Username">
+</div>
+<div class="form-group">
+<label>Password : </label><input type="password" class="form-control" name="pass" placeholder = "Enter Password">
+</div>
 	
-<tr><td><input type="submit" name="submit" value="login"></td><td><input type="reset" name="submit" value="Reset"></td></tr>
-
-
-</table>
+<input type="submit" name="submit" class="btn btn-primary" value="login">&nbsp&nbsp<input type="reset" class="btn btn-danger" name="submit" value="Reset">
 </fieldset>
 </form>
-
+</div>
+</nav>
 
 
 </body>
