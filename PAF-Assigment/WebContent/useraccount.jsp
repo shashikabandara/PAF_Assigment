@@ -12,7 +12,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
     .section1 {
-        height: 600px;
+        height: 520px;
        
         background-color: #C0C0C0;
     }

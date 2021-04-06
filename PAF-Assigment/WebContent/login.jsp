@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Login</title>
 <link href="main.css" type="text/css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -16,7 +17,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Gadaget Badget</a>
+      <a class="navbar-brand" href="#">WebSiteName</a>
     </div>
 	        <ul class="nav navbar-nav">
 	              <li><a href="#" >PROFILE</a></li>
@@ -31,14 +32,15 @@
 	<form action="log" method="post" class="sendmsg" id="frmlogin_registration">
 	<fieldset>
 <legend>Login</legend>
-<div class="form-group">
-<label>User Name : </label><input type="text" class="form-control" name="uid" placeholder = "Enter Username">
-</div>
-<div class="form-group">
-<label>Password : </label><input type="password" class="form-control" name="pass" placeholder = "Enter Password">
-</div>
+<table>
+<tr><td><label>User Name : </label> </td><td><input type="text" class="form-control" name="uid" placeholder = "Enter Username"></td></tr>
+<tr><td><label>Password : </label> </td><td><input type="password" class="form-control" name="pass" placeholder = "Enter Password"></td></tr>
+
 	
-<input type="submit" name="submit" class="btn btn-primary" value="login">&nbsp&nbsp<input type="reset" class="btn btn-danger" name="submit" value="Reset">
+<tr><td><input type="submit" name="submit" class="btn btn-primary" value="login"></td><td><input type="reset" class="btn btn-danger" name="submit" value="Reset"></td></tr>
+
+
+</table>
 </fieldset>
 </form>
 </div>

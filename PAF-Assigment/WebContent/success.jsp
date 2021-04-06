@@ -31,24 +31,56 @@ ResultSet resultSet = null;
 <meta charset="UTF-8">
 <title>Profile</title>
 <link href="main.css" type="text/css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .section1 {
+        height: 520px;
+       
+        background-color: #C0C0C0;
+    }
+</style>
 </head>
 <body>
-<div class="header_web">
-
-	<div class="menuBar">
-	        <ul>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Gadaget Badget</a>
+    </div>
+	        <ul class="nav navbar-nav">
 	              <li><a href="#" class="active">PROFILE</a></li>
 	            <li><a href="customerinsert.jsp" >SEND MESSAGE</a></li>
 	            <li><a href="receivemessage.jsp" > MESSAGES LIST</a></li>
 	            <li><a href="logout.jsp">LOGOUT</a></li>
 	        </ul>
 	</div>
-	<div class="menuBar_right">
-	     
-	</div>
-	</div>
+	</nav>
+	<%
 
+try{ 
+	
+connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+statement=connection.createStatement();
+String sql ="SELECT * FROM customer where id=3";
+resultSet = statement.executeQuery(sql);
+while(resultSet.next()){
+%>
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+    	<div class="section1" >
+    		<legend>Personal Details</legend>
+    	<label>Customer Name</label><br/>
+		<%=resultSet.getString("name") %><br/><br/>
+
+		<label>Customer Email</label><br/>
+		<%=resultSet.getString("email") %><br/><br/>
+	
+		<label>Customer Phone</label><br/>
+		<%=resultSet.getString("phone") %><br/><br/>
+    	</div>
+    	</div>
 	  
 <form action="" method="post" class="sendmsg" id="frmlogin_registration">
 <fieldset>
@@ -67,17 +99,8 @@ ResultSet resultSet = null;
 </c:forEach>
 
 
-<%
 
-try{ 
-	
-connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
-statement=connection.createStatement();
-String sql ="SELECT * FROM customer where id=1";
-resultSet = statement.executeQuery(sql);
-while(resultSet.next()){
-%>
-<table>
+<table class="table table-condensed">
 <tr><td>Customer ID </td><td><%=resultSet.getString("id") %></td></tr>
 <tr><td>Name </td><td><%=resultSet.getString("name") %></td></tr>
 <tr><td>Email </td><td><%=resultSet.getString("email") %></td></tr>
@@ -105,7 +128,7 @@ e.printStackTrace();
 	</c:url>
 	
 	<a href="${cusupdate}">
-	<input type="button" name="update" value="Edit">
+	<input type="button" name="update" value="Edit"  class="btn btn-primary">
 	</a>
 </fieldset>	
 
