@@ -31,7 +31,10 @@
 <fieldset>
 <legend>Delete message</legend>
 <div class="form-group">
-<label>Please enter the Message ID to delete the specific message : </label><input type="text" name="d"  class="form-control">
+<div class="alert alert-info">
+  <strong>Info!</strong> Please enter the Message ID to delete the specific message.
+</div>
+<label>Message ID : </label><input type="text" name="d"  class="form-control">
 </div>
 <input type="submit" value="Submit" class="btn btn-primary" >
 <input type="reset" value="Reset" class="btn btn-danger">
