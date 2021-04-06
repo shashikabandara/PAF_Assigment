@@ -31,7 +31,9 @@
 <div class="container">
 <fieldset>
 <legend>Confirm Logout</legend>
-Do You Wish To Log Out Now.
+<div class="alert alert-warning">
+  <strong>Warning!</strong> Do You Wish To Log Out Now.
+</div>
 <input type="submit" value="Log Out" id="b1" onclick="sub('b1')" class="btn btn-danger">
 <input type="submit" value="Cancel" id="b2" onclick="sub('b2')" class="btn btn-primary">
 </fieldset>
