@@ -28,46 +28,51 @@ ResultSet resultSet = null;
 <meta charset="ISO-8859-1">
 <title>reply</title>
 <link href="main.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
 <body>
-<div class="header_web">
-	
-	<div class="menuBar">
-	        <ul>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Gadaget Badget</a>
+    </div>
+	        <ul class="nav navbar-nav">
+	       
 	              <li><a href="success.jsp" >PROFILE</a></li>
 	            <li><a href="#" class="active">SEND MESSAGE</a></li>
 	            <li><a href="receivemessage.jsp" > MESSAGES LIST</a></li>
 	            <li><a href="logout.jsp">LOGOUT</a></li>
 	        </ul>
-	</div>
-	<div class="menuBar_right">
-	     
-	</div>
-	</div>
+		</div>
+</nav>
+<div class="container">
 <form class="sendmsg" action="insert" method="post" id="frmlogin_registration">
 <fieldset>
 <legend>Send a message</legend>
-<table>
-<tr>
-<td>From:</td><td><input type="email" name="from" id="f" placeholder="Email" cols="40" rows="1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" required></td>
-</tr>
-<tr>
-<td>To:</td><td><input type="email" id="t" name="to" placeholder="Email" cols="40" rows="1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" required></td>
-</tr>
-<tr>
-<td>Subject:</td><td><textarea cols="40" rows="1" name="subject" placeholder="Subject" required></textarea></td>
-</tr>
-<tr>
-<td>Message:</td><td><textarea cols="40" rows="5" name="message" placeholder="Enter a message" required></textarea></td> 
-</tr>
 
-</table>
-<input type="submit"  value="Submit">
-<input type="reset" value="Reset"><br><br> 
+<div class="form-group">
+<label>From:</label><input type="email" name="from" class="form-control" id="f" placeholder="Email" cols="40" rows="1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" required>
+</div>
+<div class="form-group">
+<label>To:</label><input type="email" id="t" name="to" class="form-control" placeholder="Email" cols="40" rows="1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" required>
+</div>
+<div class="form-group">
+<label>Subject:</label><textarea cols="40" rows="1" class="form-control" name="subject" placeholder="Subject" required></textarea>
+</div>
+<div class="form-group">
+<label>Message:</label><textarea cols="40" rows="5" class="form-control" name="message" placeholder="Enter a message" required></textarea> 
+</div>
+<input type="submit"  value="Submit" class="btn btn-primary">
+<input type="reset" value="Reset" class="btn btn-danger"><br><br> 
 </fieldset>
 </form>
-<table>
+</div>
+<div class="container">
+<legend>Display send messages</legend>
+<table class="table table-condensed">
 <tr>
 <th class="aa">#</th>
 <th class="aa">Sender Message</th>
@@ -109,6 +114,6 @@ e.printStackTrace();
 %>
 
 </table>
-
+</div>
 </body>
 </html>
