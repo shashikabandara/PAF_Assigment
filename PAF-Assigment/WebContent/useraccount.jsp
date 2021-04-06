@@ -35,7 +35,31 @@
 	<div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav">
-    	<div class="section1">hello</div>
+    	<div class="section1" >
+    	
+    	<table class="table table-condensed" >
+	<c:forEach var="cus" items="${cusDetails}">
+	
+	<c:set var="id" value="${cus.id}"/>
+	<c:set var="name" value="${cus.name}"/>
+	<c:set var="email" value="${cus.email}"/>
+	<c:set var="phone" value="${cus.phone}"/>
+	<c:set var="username" value="${cus.userName}"/>
+	<c:set var="password" value="${cus.password}"/>
+	
+    	
+    	<legend>Personal Details</legend>
+    	<label>Customer Name</label><br/>
+		${cus.name}<br/><br/>
+
+		<label>Customer Email</label><br/>
+		${cus.email}<br/><br/>
+	
+		<label>Customer Phone</label><br/>
+		${cus.phone}<br/><br/>
+		</c:forEach>
+		</table>
+    	</div>
     </div>
     <div class="col-sm-9">
 	<form action=""  method="post" class="sendmsg" id="frmlogin_registration">
