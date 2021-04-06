@@ -19,7 +19,7 @@ Class.forName(driverName);
 e.printStackTrace();
 }
 
-Connection connection = null;
+Connection connection = null;//
 Statement statement = null;
 ResultSet resultSet = null;
 %>
