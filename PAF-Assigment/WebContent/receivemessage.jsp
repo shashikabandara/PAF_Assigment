@@ -30,29 +30,31 @@ ResultSet resultSet = null;
 <meta charset="UTF-8">
 <title>message list</title>
 <link href="main.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="msglist.js"></script>
 
 </head>
 <body>
-<div class="header_web">
-	
-	<div class="menuBar">
-	        <ul>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Gadaget Badget</a>
+    </div>
+	        <ul class="nav navbar-nav">
 				 <li><a href="success.jsp" >PROFILE</a></li>
 	            <li><a href="customerinsert.jsp" >SEND MESSAGE</a></li>
 	            <li><a href="#" class="active"> MESSAGES LIST</a></li>
 	            <li><a href="logout.jsp">LOGOUT</a></li>
 	        </ul>
-	</div>
-	<div class="menuBar_right">
-	     
-	</div>
-	</div>
- <div class="side-content">
-      <div class="msglist">
-	  
+	        </div>
+	        </nav>
+	
+<div class="container">
+<legend>Recieved Message From User</legend>
 <form id="ml" action="deletemessage.jsp"  onsubmit="sub()" id="frmlogin_registration">
-<table>
+<table class="table table-condensed">
 <tr>
 <th class="aa">#</th>
 <th class="aa">Name</th>
@@ -95,14 +97,13 @@ e.printStackTrace();
 
 </table>
 
-<input type="submit" value="Delete a Message"><br><br>
+<input type="submit" value="Delete a Message" class="btn btn-danger"><br><br>
 </form>
 <form action="customerinsert.jsp">
-<input type="submit" value="Reply" id="v6">
+<input type="submit" value="Reply" id="v6" class="btn btn-primary" >
 
 </form>
 </div>
-    </div>
 
 
 
