@@ -32,15 +32,14 @@
 	<form action="log" method="post" class="sendmsg" id="frmlogin_registration">
 	<fieldset>
 <legend>Login</legend>
-<table>
-<tr><td><label>User Name : </label> </td><td><input type="text" class="form-control" name="uid" placeholder = "Enter Username"></td></tr>
-<tr><td><label>Password : </label> </td><td><input type="password" class="form-control" name="pass" placeholder = "Enter Password"></td></tr>
+<label>User Name : </label> <input type="text" class="form-control" name="uid" placeholder = "Enter Username"><br/>
+<label>Password : </label><input type="password" class="form-control" name="pass" placeholder = "Enter Password"><br/>
 
 	
-<tr><td><input type="submit" name="submit" class="btn btn-primary" value="login"></td><td><input type="reset" class="btn btn-danger" name="submit" value="Reset"></td></tr>
+<input type="submit" name="submit" class="btn btn-primary" value="login">&nbsp&nbsp<input type="reset" class="btn btn-danger" name="submit" value="Reset">
 
 
-</table>
+
 </fieldset>
 </form>
 </div>
