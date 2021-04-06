@@ -10,6 +10,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .section1 {
+        height: 600px;
+       
+        background-color: #C0C0C0;
+    }
+</style>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -25,6 +32,12 @@
 	        </ul>
 	</div>
 	</nav>
+	<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+    	<div class="section1">hello</div>
+    </div>
+    <div class="col-sm-9">
 	<form action=""  method="post" class="sendmsg" id="frmlogin_registration">
 	<fieldset>
 <legend>Profile</legend>
@@ -77,10 +90,13 @@
 	</c:url>
 	
 	<a href="${cusupdate}">
-	<input type="button" name="update" value="Edit">
+	<input type="button" name="update" value="Edit"  class="btn btn-primary">
 	</a>
 	</fieldset>
 </form>
+</div>
+</div>
+</div>
 
 
 
